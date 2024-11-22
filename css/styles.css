@@ -193,7 +193,7 @@ img {
   margin: 0 auto 45px;
 }
 
-.bottom-item {
+.button {
   background-color: #4d5ae5;
   font-weight: 500;
   font-size: 16px;
@@ -228,8 +228,8 @@ img {
   margin: 0 auto;
 }
 
-.bottom-item:hover,
-.bottom-item:focus {
+.button:hover,
+.button:focus {
   background-color: #404bbf;
 }
 
@@ -487,5 +487,106 @@ img {
 .footer-socials .link-socials:hover,
 .footer-socials .link-socials:focus {
   background-color: #31d0aa;
+}
+
+.footer-wrapper-subscribe {
+  margin-left: 80px;
+}
+
+.form-subscribe {
+  display: flex;
+  gap: 24px;
+}
+
+.form-input {
+  border: 1px solid #fff;
+  border-radius: 4px;
+  width: 264px;
+  height: 40px;
+  background-color: #2e2f42;
+  padding: 8px 16px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:hover,
+.form-input:focus {
+  border: 1px solid #404bbf;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+}
+
+.placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #fff;
+  padding: 8px 212px 8px 16px;
+}
+
+.form-button {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  border: none;
+  padding: 8px 24px;
+  width: 165px;
+  height: 40px;
+}
+
+.icons-button-image {
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  fill: #fff;
+}
+/* #endregion */
+
+/* #region Modal */
+.backdrop-overlay {
+  background-color: rgba(46, 47, 66, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop-overlay.is-open {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 4px;
+  width: 408px;
+  min-height: 584px;
+  background-color: #fcfcfc;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
+    0 2px 1px 0 rgba(0, 0, 0, 0.2);
+  transform: translate(-50%, -50%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop-overlay:not(is-open) .modal {
+  transform: translate(-50%, -50%), scale(1.5);
+}
+
+.send-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 }
 /* #endregion */

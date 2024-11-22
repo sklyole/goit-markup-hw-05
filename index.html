@@ -67,7 +67,9 @@
       <section class="page-title">
         <div class="container">
           <h1 class="title-item">Effective Solutions for Your Business</h1>
-          <button class="bottom-item" type="button">Order Service</button>
+          <button class="button" type="button" data-modal-open>
+            Order Service
+          </button>
         </div>
       </section>
 
@@ -517,7 +519,7 @@
             digital marketing & growth solutions.
           </p>
         </div>
-        <div class="footer-wrapper">
+        <div class="footer-wrapper-media">
           <p class="footer-caption">Social media</p>
           <ul class="footer-socials">
             <li class="icons-socials">
@@ -566,7 +568,43 @@
             </li>
           </ul>
         </div>
+        <div class="footer-wrapper-subscribe">
+          <p class="footer-caption">Subscribe</p>
+          <form class="form-subscribe" action="">
+            <label class="form-label" for="email">
+              <input
+                class="form-input"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="E-mail"
+              />
+            </label>
+
+            <button class="button form-button" type="button">
+              Subscribe
+              <svg class="icons-button-image" width="24" height="24">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
+
+    <div class="backdrop-overlay" data-modal>
+      <div class="modal">
+        <p class="modal-caption">
+          Leave your contacts and we will call you back
+        </p>
+
+        <button class="close-button" type="button" data-modal-close>
+          Close
+        </button>
+        <button class="button send-button" type="button">Send</button>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
