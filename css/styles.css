@@ -498,18 +498,19 @@ img {
   gap: 24px;
 }
 
-.form-input {
+.form-element input {
   border: 1px solid #fff;
   border-radius: 4px;
   width: 264px;
   height: 40px;
   background-color: #2e2f42;
   padding: 8px 16px;
+  outline: none;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-input:hover,
-.form-input:focus {
+.form-element input:hover,
+.form-element input:focus {
   border: 1px solid #404bbf;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 }
@@ -521,6 +522,11 @@ img {
   letter-spacing: 0.04em;
   color: #fff;
   padding: 8px 212px 8px 16px;
+}
+
+.form-element input:hover::placeholder,
+.form-element input:focus::placeholder {
+  color: #404bbf;
 }
 
 .form-button {
@@ -581,6 +587,68 @@ img {
   transform: translate(-50%, -50%), scale(1.5);
 }
 
+p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #2e2f42;
+  padding: 72px 24px 0;
+  margin-bottom: 16px;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  padding: 0 24px 0;
+}
+
+.form-field input {
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  width: 360px;
+  height: 40px;
+  margin-top: 4px;
+  margin-bottom: 8px;
+  outline: none;
+}
+
+.form-field svg {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  padding: 3px 0px;
+}
+
+.form-field textarea {
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  width: 360px;
+  height: 120px;
+  resize: none;
+  margin-top: 4px;
+  outline: none;
+}
+
+.form-field input:hover,
+.form-field input:focus,
+.form-field input:hover::placeholder,
+.form-field input:focus::placeholder {
+  border: 1px solid #4d5ae5;
+}
+.form-input placeholder {
+  line-height: 1.17;
+  color: rgba(46, 47, 66, 0.4);
+  padding: 8px 212px 8px 16px;
+}
+
+.form-field textarea:hover,
+.form-field textarea:focus,
+.form-field textarea:hover::placeholder,
+.form-field textarea:focus::placeholder {
+  border: 1px solid #4d5ae5;
+}
 .send-button {
   display: flex;
   align-items: center;
@@ -589,4 +657,5 @@ img {
   gap: 10px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 }
+
 /* #endregion */
