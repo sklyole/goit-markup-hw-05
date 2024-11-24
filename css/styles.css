@@ -692,27 +692,8 @@ img {
 /* #endregion */
 
 /* #region Checkbox and button */
-.send-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  gap: 10px;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-}
-
-/* checkbox vallue true  */
-
 .modal-form-checkbox {
   margin-bottom: 24px;
-}
-
-input[type='checkbox']:checked
-  + .modal-form-checkbox-label-text
-  > .form-checkbox {
-  background-color: #404bbf;
-  border-radius: 2px;
-  border: 1px solid #404bbf;
 }
 
 .modal-form-checkbox-label-text {
@@ -731,27 +712,34 @@ input[type='checkbox']:checked
   border: 1px solid rgba(46, 47, 66, 0.4);
   margin-right: 8px;
   cursor: pointer;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: background-color;
 }
 
-.form-checkbox-icon {
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  fill: transparent;
+input[type='checkbox']:checked
+  + .modal-form-checkbox-label-text
+  > .form-checkbox {
+  background-color: #404bbf;
+  fill: #f4f4fd;
+  border: none;
 }
-.modal-form-checkbox-label-text:hover
-  .form-checkbox-icon
-  .modal-form-checkbox-label-text:focus
-  .form-checkbox-icon {
-  fill: #fff;
-}
+
 .checkbox-link {
-  line-height: 1.33333;
+  line-height: 1.33;
   text-decoration: underline;
   text-decoration-skip-ink: none;
   color: #4d5ae5;
+}
+
+.send-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 }
 /* #endregion */
